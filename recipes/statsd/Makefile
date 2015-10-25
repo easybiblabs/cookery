@@ -29,7 +29,7 @@ build:
 install:
 	cd $(CACHE) \
 	&& npm install --production --no-optional \
-	&& npm install node-syslog \
+	&& npm install node-syslog@1.2.0 \
 	&& cd .. \
 	&& echo "Patching upstart to use: ${PREFIX}" \
 	&& mv "$(UPSTART)" "$(UPSTART).ies" \
