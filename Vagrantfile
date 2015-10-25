@@ -28,5 +28,6 @@ Vagrant::Config.run do |config|
   config.vm.provision :shell, :inline => 'cat /vagrant/gemrc > /root/.gemrc'
   config.vm.provision :shell, :privileged => false, :inline => 'cat /vagrant/gemrc > /home/vagrant/.gemrc'
   config.vm.provision :shell, :inline => 'apt-get install ruby-bundler'
-  config.vn.provision :shell, :priviledge => false, :inline => 'cd /vagrant && bundle install'
+  config.vm.provision :shell, :priviledge => false, :inline => 'cd /vagrant && bundle install'
+  config.vm.provision :shell, :inline => "sudo apt-get install -y build-essential"
 end
